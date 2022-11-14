@@ -14,11 +14,23 @@
     height: 3.75rem;
 } 
 
+.container-fluid{
+    background-color: rgb(157, 220, 20);
+    border: 2px solid black;
+    height: 70px;
+}
+.row-1{
+    border: 2px solid rgb(75, 47, 255);
+}
+.col, .col-1, .col-2, .col-3, .col-4, .col-9{
+    border: 2px solid rgb(0, 5, 9);
+}
 .navbar{
     height: 3.75rem;
    /* float: right; */
     --bs-navbar-hover-color: #944a9d;
 }
+
 .navbar-collapse{
     justify-content: flex-end;
 }
@@ -29,8 +41,6 @@
 
 .menu-left{
     background-color:#944a9d;
-    height: 3.75rem;
-    width: 10.188rem;
 }
 
 .navbar-toggler-menu{
