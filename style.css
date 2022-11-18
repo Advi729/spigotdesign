@@ -1,48 +1,119 @@
 *{
-    box-sizing: border-box;
+    
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
 }
 
 .body{
+    box-sizing: border-box;
     font-family: Acherus Grotestque,sans-serif;
     display: block;
-    width: 100%;
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
-    
+    max-width: 100%;
 }
 
-.header1{
-    height: 3.75rem;
-    background-color: #fff;
-} 
 
 .navbar{
-    height: 3.75rem;
-   /* float: right; */
-    --bs-navbar-hover-color: #944a9d;
+    /* position: relative; */
+    max-height: 3.75rem;
+    padding-left: 20px;
+    margin: 0;
+    padding-right: 60px;
+    display: flex;
+    background-color: #242433;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    /* float: right; */
+    /* --bs-navbar-hover-color: #944a9d; */
 }
 
-.navbar-collapse{
-    justify-content: flex-end;
+.navbar a {
+    color: white;
+    text-decoration: none;
 }
 
-.navbar-toggler {
-    margin-left: auto;
+.navbar .logo{
+    font-size: 2em;
+    font-weight: bold;
 }
 
-.menu-left{
-    background-color:#944a9d;
+.navbar .nav-links{
+    display: flex;
+    align-items: center;
 }
 
-.navbar-toggler-menu{
-    font-size: .9375rem;
-    line-height: 1;
-    color: #453c82;
+.navbar .nav-links ul {
+    display: flex;
 }
 
-.logo{
+.navbar .nav-links ul li{
+    margin: 0 25px;
+}
+
+.navbar .nav-links ul li.active a {
+    color: #944a9d;
+    font-weight: 600;
+}
+
+.navbar .menu-hamburger {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 35px;
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    .navbar {
+        margin: 0;
+    }
+    .navbar .logo {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+    }
+    .navbar .menu-hamburger {
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        width: 35px;
+    }
+    .navbar .menu-hamburger {
+        display: block;
+    }
+    .nav-links {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #1e1e240e;
+        backdrop-filter: blur(8px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+    .nav-links.mobile-menu {
+        margin-left: 0;
+    }
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar .nav-links ul li {
+        margin: 25px 0;
+        font-size: 1.2em;
+    }
+}
+
+
+.logo-img{
     background-color: white;
     height: 2.188rem;
     width: 2.188rem;

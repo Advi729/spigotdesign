@@ -12,11 +12,42 @@
     <title>Spigot Design - Web Design and Digital Marketing from Park City, Utah</title>
 </head>
 <body>
-    <header class="header1 fixed-top">
-        <div class="row">
+    <nav class="navbar w-100 fixed-top">
+        <a href="#" class="logo">Spigot</a>
+        <div class="nav-links ">
+            <ul>
+                <li class="active">
+                <a href="#">PORTFOLIO</a>
+                </li>
+               <li>
+                <a href="#">SERVICES</a>
+                <!-- <ul class="dropdown-menu">
+                     <li><a class="dropdown-item" href="#">WEB DESIGN</a></li>
+                     <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">DIGITAL MARKETING & SEO</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">WORDPRESS SUPPORT & HOSTING</a></li>
+                </ul> -->
+                </li>
+               <li>
+                <a href="#">BLOG</a>
+               </li>
+               <li>
+                <a href="#">ABOUT</a>
+                 </li>
+                <li>
+                 <a href="#">CONTACT</a>
+                 </li>
+            </ul> 
+
+        </div>
+        <img src="images/menu-btn.png" alt="menu hamburger" class="menu-hamburger">
+    </nav>
+    <!-- <header class="header1 fixed-top">
+        <div class="row w-100">
             <div class="col-lg-2 col-md-3 col-sm-4 col-5 menu-left p-1 ps-4">
-                <a href="index.html" class="text-white text-decoration-none fs-3">
-                   <img class="logo" type="image" src="images/cropped-spigot-fav-png-1-60x60.png">
+                <a href="index.html" class="logo text-white text-decoration-none fs-3">
+                   <img class="logo-img" type="image" src="images/cropped-spigot-fav-png-1-60x60.png">
                     spigot
                 </a>
             </div>
@@ -53,20 +84,20 @@
                                  <li class="nav-item ms-auto me-3">
                                   <a class="nav-link" href="#">CONTACT</a>
                                   </li>
-                             </ul>
+                             </ul> -->
                              <!-- <div class="navbar p-3">
                                   <a class="nav-link" href="#">
                                    <i class="bi bi-search text-body"></i>
                                     </a>                       
                             </div> -->
-                      </div>
+                      <!-- </div>
                     </div>
                   </nav>
             </div>
              
         </div>
         
-    </header>
+    </header> -->
     <section class="hero container-fluid p-0 border border-bottom-5 align-items-center">
        
            
@@ -90,8 +121,8 @@
         </div>
     </section>
 
-    <section class="container-fluid p-0">
-        <div class="row g-3">
+    <section class="container w-100">
+        <div class="row gy-3 my-3">
             <!-- column 1-->
             <div class="col-lg-4 col-md-6 col-sm-12 col-12 p-0.1">
             <div class="card">
@@ -110,7 +141,7 @@
                     <img src="images/card2 (1).jpg" class="card-img-top img-fluid" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">American Academy of Innovation</h5>
-                        <p class="card-text">Site overhaul to highlight AAI's innovative spirit in a user-focused design.</p>
+                        <p class="card-text">Site overhaul to highlight AAI's innovation in a user-focused design.</p>
                         <a href="#" class="btn btn-outline-info">READ MORE</a>
                     </div>
                 </div>
@@ -222,4 +253,20 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="js/bootstrap.js"></script>
 </body>
+
+<script>
+
+    const menuHamburger = document.querySelector(".menu-hamburger")
+    
+    const navLinks = document.querySelector(".nav-links")
+    
+     
+    
+    menuHamburger.addEventListener('click',()=>{
+    
+    navLinks.classList.toggle('mobile-menu')
+    
+    })
+    
+    </script>
 </html>
